@@ -1,1 +1,1 @@
-web: bin/simple-crud
+web: simple-crud
