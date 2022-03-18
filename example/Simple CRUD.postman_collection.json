@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "557b26d2-abaa-4494-81f0-ccd836b5b377",
+		"name": "Simple CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/message/list",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"message",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Message",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/message/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"message",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Mar 2022 05:25:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 0,\n            \"name\": \"Winter Boo\",\n            \"data\": \"Semangatt!!!\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Summer Boo\",\n            \"data\": \"Yeayyy\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Boo\",\n            \"data\": \"Need sleep 😴\"\n        }\n    ],\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Message by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/message/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"message",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Message by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/message/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"message",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Mar 2022 06:06:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 0,\n        \"name\": \"Winter Boo\",\n        \"data\": \"Semangatt!!!\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Litaa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "Hello World!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/message/create",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"message",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Message",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Litaa",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "Hello World!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/message/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"message",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Mar 2022 06:23:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Litaa\",\n        \"data\": \"Hello World!\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Message",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Summer Boo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "super duper secret",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "Horee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/message/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"message",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Message",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Summer Boo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "super duper secret",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "Horee",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/message/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"message",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Mar 2022 06:17:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Summer Boo\",\n        \"data\": \"Horee\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Message",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "password",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/message/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"message",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Message",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/message/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"message",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 18 Mar 2022 06:25:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 0,\n            \"name\": \"Winter Boo\",\n            \"data\": \"Semangatt!!!\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Summer Boo\",\n            \"data\": \"Horee\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Boo\",\n            \"data\": \"Need sleep 😴\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://law-message-api.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
