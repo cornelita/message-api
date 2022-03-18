@@ -11,7 +11,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
-	"github.com/joho/godotenv"
 )
 
 var dbMessage *redis.Client
@@ -226,12 +225,6 @@ func deleteMessageHandler(c *gin.Context) {
 
 func main() {
 	log.Println("LAW - Starting simple CRUD...")
-
-	log.Println("Load environment variable")
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
 
 	log.Println("Init database connection")
 	initDB()
